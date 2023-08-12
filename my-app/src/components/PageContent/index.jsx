@@ -1,6 +1,6 @@
 
 function PageContent(){
-    return <div>PageContent</div>
+    return <div className="PageContent">PageContent</div>
 }
 
 export default PageContent;

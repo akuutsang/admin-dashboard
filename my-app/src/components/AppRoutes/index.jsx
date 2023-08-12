@@ -1,6 +1,6 @@
 
 function AppRoutes(){
-    return <div>App routes</div>
+    return <div className="AppRoutes">App routes</div>
 }
 
 export default AppRoutes;

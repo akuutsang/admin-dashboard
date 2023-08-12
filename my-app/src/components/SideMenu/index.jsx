@@ -1,6 +1,6 @@
 
 function SideMenu(){
-    return <div>SideMenu</div>
+    return <div className="SideMenu">SideMenu</div>
 }
 
 export default SideMenu;
