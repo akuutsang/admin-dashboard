@@ -1,21 +1,8 @@
-// import { Space } from ""
-import AppHeader from './components/AppHeader';
-// import AppFooter from './components/AppFooter';
-import PageContent from './components/PageContent';
-import SideMenu from './components/SideMenu';
-
-import './App.css';
-import AppFooter from "./components/AppFooter";
-
+import Topbar from "./components/TopBar";
 function App() {
   return (
-    <div className="App">
-      <AppHeader />
-      {/* <Space> */}
-        <SideMenu></SideMenu>
-        <PageContent></PageContent>
-     {/* </Space> */}
-      <AppFooter />
+    <div> 
+      <Topbar/> 
     </div>
   );
 }
