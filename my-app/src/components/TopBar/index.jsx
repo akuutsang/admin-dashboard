@@ -22,7 +22,8 @@ export default function Topbar() {
                 <div className="topbarIconContainer">
                   <SettingsOutlined/>
                 </div>
-                <img src="my-app/public/assets/topA.png" alt="" className='topAvatar' />
+                <img src="./assets/topA.png" alt="" className='topAvatar'/>
+
             </div>
         </div> 
     </div>
