@@ -5,7 +5,7 @@ import { Visibility } from '@mui/icons-material';
 export default function WidgetSm() {
   return (
     <div className="widgetSm">
-     <span className="widgetSmTitle">New Join Members</span>
+     <span className="widgetSmTitle">New Members</span>
      <ul className="widgetSmList">
       <li className="widgetSmListItem">
         <img src="./assets/cuteCat.jpg" alt="" className='widgetSmImg'/>
@@ -14,7 +14,7 @@ export default function WidgetSm() {
           <span className="widgetSmUserTitle">Software Engineer</span>
         </div>
         <button className="widgetSmButton">
-          <Visibility />
+          <Visibility className="widgetSmIcon"/>
           display
         </button>
       </li>
@@ -25,7 +25,7 @@ export default function WidgetSm() {
           <span className="widgetSmUserTitle">Software Engineer</span>
         </div>
         <button className="widgetSmButton">
-          <Visibility />
+          <Visibility className="widgetSmIcon" />
           display
         </button>
       </li>
@@ -36,7 +36,7 @@ export default function WidgetSm() {
           <span className="widgetSmUserTitle">Software Engineer</span>
         </div>
         <button className="widgetSmButton">
-          <Visibility />
+          <Visibility className="widgetSmIcon" />
           display
         </button>
       </li>
@@ -47,7 +47,7 @@ export default function WidgetSm() {
           <span className="widgetSmUserTitle">Software Engineer</span>
         </div>
         <button className="widgetSmButton">
-          <Visibility />
+          <Visibility className="widgetSmIcon" />
           display
         </button>
       </li>
@@ -58,7 +58,7 @@ export default function WidgetSm() {
           <span className="widgetSmUserTitle">Software Engineer</span>
         </div>
         <button className="widgetSmButton">
-          <Visibility />
+          <Visibility className="widgetSmIcon" />
           display
         </button>
       </li>
