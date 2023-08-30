@@ -29,7 +29,7 @@ export default function sideBar() {
                 <ul className="sidebarList">
                     <li className="sidebarListItem">
                         <Person className="sidebarIcon"/>
-                        User   
+                        Users   
                     </li>
                     <li className="sidebarListItem">
                         <Storefront sidebarIcon/>

@@ -1,131 +1,57 @@
-import './userList.css'
-import * as React from 'react';
+import "./userList.css"
 import { DataGrid } from '@mui/x-data-grid';
 import { DeleteOutline } from '@mui/icons-material';
-
-const columns = [
-  { field: 'id', headerName: 'ID', width: 100 },
-  { field: 'user', headerName: 'User', width: 200, renderCell: (params)=>{
-    return ( 
-            <div className='userListUser'>
-              <img className='userListImage' src={params.row.avatar} alt="" /> 
-                {params.row.userName} 
-            </div>
-
-    );
-  } },
-  { field: 'email', headerName: 'Email', width: 200 },
-  { field: 'status', headerName: 'Status', width: 100 },
-  { field: 'transaction', headerName: 'Transaction', width: 100 },
-  { field: 'action', headerName: 'Action', width: 150, renderCell: (params)=>{
-    return(
-      <>
-       <button className='userListEdit'> Edit </button>
-       < DeleteOutline className='userListDelete'/> 
-      </>
-    )
-  }}
-
-];
-
-const rows = [
-  { id: 1,
-    userName: 'Jon Snow', 
-    avatar:
-     "./assets/cuteCat.jpg",
-    email:"jon@gmail.com",
-    status:"active",
-    transaction:"$120.00"
-  },
-  { id: 2,
-    userName: 'Jon Snow', 
-    avatar:
-     "./assets/cuteCat.jpg",
-    email:"jon@gmail.com",
-    status:"active",
-    transaction:"$120.00",
-  },
-  { id: 3,
-    userName: 'Jon Snow', 
-    avatar:
-     "./assets/cuteCat.jpg",
-    email:"jon@gmail.com",
-    status:"active",
-    transaction:"$120.00",
-  },
-  { id: 4,
-    userName: 'Jon Snow', 
-    avatar:
-     "./assets/cuteCat.jpg",
-    email:"jon@gmail.com",
-    status:"active",
-    transaction:"$120.00",
-  },
-  { id: 5,
-    userName: 'Jon Snow', 
-    avatar:
-     "./assets/cuteCat.jpg",
-    email:"jon@gmail.com",
-    status:"active",
-    transaction:"$120.00",
-  },
-  { id: 6,
-    userName: 'Jon Snow', 
-    avatar:
-     "./assets/cuteCat.jpg",
-    email:"jon@gmail.com",
-    status:"active",
-    transaction:"$120.00",
-  },
-  { id: 7,
-    userName: 'Jon Snow', 
-    avatar:
-     "./assets/cuteCat.jpg",
-    email:"jon@gmail.com",
-    status:"active",
-    transaction:"$120.00",
-  },
-  { id: 8,
-    userName: 'Jon Snow', 
-    avatar:
-     "./assets/cuteCat.jpg",
-    email:"jon@gmail.com",
-    status:"active",
-    transaction:"$120.00",
-  },
-  { id: 9,
-    userName: 'Jon Snow', 
-    avatar:
-     "./assets/cuteCat.jpg",
-    email:"jon@gmail.com",
-    status:"active",
-    transaction:"$120.00",
-  },
-  { id: 10,
-    userName: 'Jon Snow', 
-    avatar:
-     "./assets/cuteCat.jpg",
-    email:"jon@gmail.com",
-    status:"active",
-    transaction:"$120.00",
-  },
-];
-
+import { userRows } from "../../dummyData"
+import { Link } from "react-router-dom"
+import { useState } from "react";
 
 export default function UserList() {
-  
+    const [data,setData] = useState(userRows)
+
+    const handleDelete = (id)=>{
+        setData(data.filter(item=>item.id !== id));
+    };
+
+    const columns = [
+        { field: 'id', headerName: 'ID', width: 70 },
+        { field: 'user', headerName: 'User', width: 200, renderCell: (params)=>{
+            return (
+                <div className="userListUser">
+                    <img className="userListImg" src={params.row.avatar} alt="" />
+                    {params.row.username}
+                </div>
+            )
+        }  },
+        { field: 'email', headerName: 'Email', width: 200 },
+        { field: 'status', headerName: 'Status', width: 120 },
+        { field: 'transaction', headerName: 'Transaction Volume', width: 160 },
+        { field: 'action', headerName: 'Action', width: 150, renderCell: (params)=>{
+            return (
+                <>
+                  <Link to={"/user/"+params.row.id}>
+                    <button className="userListEdit">Edit</button>
+                  </Link>
+                    <DeleteOutline className="userListDelete" onClick={()=>handleDelete(params.row.id)} />
+                </>  
+            )
+        }},
+    ];
+    
+    
   return (
-    <div style={{ height: 400, width: '100%' }}>
-      <DataGrid  rows={rows}
-      disableRowSelectionOnClick
+
+    <div className="userList">
+       <DataGrid
+        rows={data}
         columns={columns}
         initialState={{
           pagination: {
             paginationModel: { page: 0, pageSize: 5 },
           },
         }}
-        pageSizeOptions={[5, 7, 10]}
-        checkboxSelection  />
+        pageSizeOptions={[5, 10]}
+        checkboxSelection
+      />
     </div>
   )
 }
