@@ -3,6 +3,7 @@ import { CalendarToday } from "@mui/icons-material"
 import { PhoneAndroid } from "@mui/icons-material"
 import { MailOutline } from "@mui/icons-material"
 import { LocationSearching } from "@mui/icons-material"
+import { Link } from "react-router-dom"
 import image from "../../images/profilePicture.JPG"
 
 import "./user.css"
@@ -12,7 +13,9 @@ export default function User() {
     <div className="user">
         <div className="userTitleContainer">
             <h1 className="userTitle">Edit User</h1>
-            <button className="userAddButton">Create</button>
+            <Link to={"/newUser"}>
+                <button className="userAddButton">Create</button>
+            </Link >
         </div>
         <div className="userContainer">
             <div className="userShow">
@@ -80,13 +83,13 @@ export default function User() {
                     </div>
                     <div className="userUpdateRight">
                         <div className="userUpdateUpload">
-                            <img src={image} alt="" />
-                            {/* <img className="userUpdateImg" src="https://www.istockphoto.com/photo/funny-kid-girl-playing-outdoor-surprised-emotional-child-in-sunglasses-3-years-old-gm1355723349-430118719" alt="" /> */}
+                            <img src={image} alt=""className="userUpdateImg" />
                             <label htmlFor="file">
-                                <Publish />
+                                <Publish className="userUpdateIcon"/>
                             </label>
-                            <input type="file" id="file"></input>
+                            <input type="file" id="file" style={{display: "none"}}></input>
                         </div>
+                        <button className="userUpdateButton">Update</button>
                     </div>
 
                 </form>

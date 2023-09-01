@@ -1,6 +1,8 @@
 import React from 'react'
 import "./style.css"
 import { NotificationsActive, LanguageOutlined, SettingsOutlined } from '@mui/icons-material';
+import pic from "../../images/cuteBoy.jpg"
+
 
 
 export default function Topbar() {
@@ -22,8 +24,7 @@ export default function Topbar() {
                 <div className="topbarIconContainer">
                   <SettingsOutlined/>
                 </div>
-                <img src="./assets/topA.png" alt="" className='topAvatar'/>
-
+                <img src={pic} alt="" className='topAvatar' />
             </div>
         </div> 
     </div>
