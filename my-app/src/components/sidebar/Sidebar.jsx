@@ -1,5 +1,6 @@
 import "./sidebar.css"
 import {  LineStyle, Timeline, TrendingUp, Storefront, Person, AttachMoney, BarChart, Markunread, DynamicFeed, ChatBubble, Work, Report } from '@mui/icons-material';
+import { Link } from "react-router-dom";
 
 
 export default function sideBar() {
@@ -27,14 +28,18 @@ export default function sideBar() {
             <div className="sidebarMenu">
                 <h3 className="sidebarTitle">Quick Menu</h3>
                 <ul className="sidebarList">
-                    <li className="sidebarListItem">
+                    <Link to="/users" className="link" >
+                        <li className="sidebarListItem">
                         <Person className="sidebarIcon"/>
-                        Users   
-                    </li>
-                    <li className="sidebarListItem">
-                        <Storefront sidebarIcon/>
-                        Products   
-                    </li>
+                            Users   
+                        </li>
+                    </Link>
+                    <Link to="/products" className="link">
+                        <li className="sidebarListItem">
+                            <Storefront sidebarIcon/>
+                            Products   
+                        </li>
+                    </Link>         
                     <li className="sidebarListItem">
                         <AttachMoney sidebarIcon/>
                         Transaction  
