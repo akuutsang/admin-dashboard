@@ -133,5 +133,99 @@
     },
 
 ];
+
+export const productsRows = [
+  { 
+      id: 1,
+      name: 'Iphone 15', 
+      img:
+      "./assets/iphone15.webp",
+      code:"6B59",
+      status:"active",
+      price:"$450.00",
+  },
+  { 
+      id: 2,
+      name: 'Iphone 15', 
+      img:
+      "./assets/iphone15.webp",
+      code:"6B59",
+      status:"active",
+      price:"$450.00",
+  },
+  { 
+      id: 3,
+      name: 'Iphone 15', 
+      img:
+      "./assets/iphone15.webp",
+      code:"6B59",
+      status:"active",
+      price:"$450.00",
+  },
+  { 
+      id: 4,
+      name: 'Iphone 15', 
+      img:
+      "./assets/iphone15.webp",
+      code:"6B59",
+      status:"active",
+      price:"$450.00",
+  },
+  { 
+      id: 5,
+      name: 'Iphone 15', 
+      img:
+      "./assets/iphone15.webp",
+      code:"6B59",
+      status:"active",
+      price:"$450.00",
+  },
+  { 
+      id: 6,
+      name: 'Iphone 15', 
+      img:
+      "./assets/iphone15.webp",
+      code:"6B59",
+      status:"active",
+      price:"$450.00",
+  },
+  { 
+      id: 7,
+      name: 'Iphone 15', 
+      img:
+      "./assets/iphone15.webp",
+      code:"6B59",
+      status:"active",
+      price:"$450.00",
+  },
+  { 
+      id: 8,
+      name: 'Iphone 15', 
+      img:
+      "./assets/iphone15.webp",
+      code:"6B59",
+      status:"active",
+      price:"$450.00",
+  },
+  { 
+      id: 9,
+      name: 'Iphone 15', 
+      img:
+      "./assets/iphone15.webp",
+      code:"6B59",
+      status:"active",
+      price:"$450.00",
+  },
+  { 
+      id: 10,
+      name: 'Iphone 15', 
+      img:
+      "./assets/iphone15.webp",
+      code:"6B59",
+      status:"active",
+      price:"$450.00",
+  },
+
+];
   
   

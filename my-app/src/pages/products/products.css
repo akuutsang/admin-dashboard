@@ -1,0 +1,31 @@
+.Products{
+    flex: 4 ;
+}
+
+.productsUser{
+    display: flex;
+    align-items: center;
+}
+
+.productsImg{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.productsEdit{
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+    background-color: rgb(25, 219, 50);
+    color: white;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.productsDelete{
+    color: red;
+    cursor: pointer;
+}
