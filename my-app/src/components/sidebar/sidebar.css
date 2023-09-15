@@ -1,7 +1,7 @@
 .sideBar{
     flex: 1;
     height: calc(100vh - 50px);
-    background-color: rgb(245, 241, 241);
+    background-color: grey;
     position: sticky;
     top: 50px;
 }
@@ -34,7 +34,7 @@
 }
 
 .sidebarListItem.active, .sidebarListItem:hover{
-    background-color: rgb(125, 126, 126);
+    background-color: rgb(245, 249, 249);
 
 }
 

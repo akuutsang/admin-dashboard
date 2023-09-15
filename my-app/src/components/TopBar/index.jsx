@@ -10,7 +10,13 @@ export default function Topbar() {
     <div className='topbar'>
         <div className="topbarWrapper">
             <div className="topleft">
-                <span className='logo'>WK</span>
+              <div className="logo">
+               <div className="text">Kaze<span className='span'>x</span></div>
+               <div className="box">
+                <div className="boxOne"></div>
+                <div className="boxTwo"></div>
+               </div>
+              </div>
             </div>
             <div className="topright">
                 <div className="topbarIconContainer">
