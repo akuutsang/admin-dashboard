@@ -53,10 +53,12 @@
 
 .widgetLgButton.Declined{
     background-color:red;
-    color: #020202;
+    color: hsl(0, 0%, 1%);
 }
 
 .widgetLgButton.Pending{
     background-color: rgba(14, 177, 232, 0.267);
     color: #000609;
 }
+
+
